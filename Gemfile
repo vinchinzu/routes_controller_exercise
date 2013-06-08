@@ -14,6 +14,7 @@ gem 'thin'
 
 gem 'quiet_assets', :group => :development
 
+gem 'eventmachine', '1.0.3'
 
 # Gems used only for assets and not required
 # in production environments by default.
