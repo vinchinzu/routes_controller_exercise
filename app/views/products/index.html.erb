@@ -1,4 +1,9 @@
-<h2>Hellol World </h2>
-<p>
-  Find me in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
-</p>
+<% lots_of_products = Product.includes(:user).all %>
+<ul>
+  <% lots_of_products.each do |p| %>
+    <li>
+      <%= p.name %>  costs  $: <%=p.price%>
+     Sold by <%= p.user.name %>
+     </li>
+   <% end %>
+</ul>
